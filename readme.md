@@ -1,3 +1,3 @@
 # Deploy
 
-[https://taroosg.github.io/language-and-function/](https://taroosg.github.io/language-and-function/)
+[https://taroosg.github.io/web-application-with-developer-tool/](https://taroosg.github.io/web-application-with-developer-tool/)
