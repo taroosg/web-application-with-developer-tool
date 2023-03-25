@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>日本語と関数を活用してプロダクトを実装する</title>
+  <title>検証ツールを使ってコードに触れてみよう</title>
 
   <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
   <meta name="author" content="Hakim El Hattab">
@@ -71,10 +71,11 @@
     
         <section >
             
-            <p>日本語と関数を活用してプロダクトを実装する</p>
+            <p>検証ツールを使ってコードに触れてみよう</p>
 <div style="display:flex;justify-content:space-evenly;align-items:center;background:lightgray;">
-<img src="https://smarthr.design/static/9eed82f677812bf25862a23e4cf8b60a/6a8a8/%E5%A4%9A%E8%A8%80%E8%AA%9E%E5%8C%96%E5%AF%BE%E5%BF%9C.png" alt="" style="height:120px;">
-<img src="https://cdn.pixabay.com/photo/2012/04/11/00/10/math-27248_1280.png" alt="" style="height:100px;">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/2048px-Google_Chrome_icon_%28February_2022%29.svg.png" alt="" style="height:100px;">
+<img src="https://kanda-it-school-kensyu.com/wp-content/uploads/html5.png" alt="" style="height:100px;">
+<img src="https://kanda-it-school-kensyu.com/wp-content/uploads/javascript.png" alt="" style="height:100px;">
 </div>
             </section>
     
@@ -89,50 +90,31 @@
             </section>
         
             <section >
-                <table>
-<thead>
-<tr>
-<th></th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>大杉太郎（たろさん，たろ先生）</td>
-</tr>
-<tr>
-<td>Age</td>
-<td>1987 年生まれ</td>
-</tr>
-<tr>
-<td>Place</td>
-<td>茨城県 -&gt; 北海道 -&gt; 東京都 -&gt; 福岡県</td>
-</tr>
-<tr>
-<td>Career</td>
-<td>講師，開発（Laravel メイン）</td>
-</tr>
-<tr>
-<td>Like1</td>
-<td>Deno，Rust，📚，✈️ 🚃 🚌，🚮</td>
-</tr>
-<tr>
-<td>Like2</td>
-<td>🥃, 🍺, 🍷</td>
-</tr>
-<tr>
-<td>twitter</td>
-<td>@taro_osg</td>
-</tr>
-</tbody>
-</table>
+                <pre><code class="language-json">{
+  &quot;name&quot;: &quot;大杉太郎&quot;,
+  &quot;nickname&quot;: [&quot;たろさん&quot;, &quot;たろ先生&quot;],
+  &quot;birth&quot;: 1987,
+  &quot;place&quot;: [&quot;茨城県&quot;, &quot;北海道&quot;, &quot;東京都&quot;, &quot;福岡県&quot;],
+  &quot;work&quot;: [&quot;講師&quot;, &quot;エンジニア（Laravel メイン）&quot;],
+  &quot;skills&quot;: [
+    &quot;JavaScript&quot;,
+    &quot;TypeScript&quot;,
+    &quot;React&quot;,
+    &quot;PHP&quot;,
+    &quot;Laravel&quot;,
+    &quot;Deno&quot;,
+    &quot;Fresh&quot;
+  ],
+  &quot;like&quot;: [&quot;📚&quot;, &quot;✈️ 🚃 🚌&quot;, &quot;🚮&quot;, &quot;🥃🍺🍷&quot;, &quot;Rust&quot;],
+  &quot;twitter&quot;: &quot;@taro_osg&quot;
+}
+</code></pre>
 
             </section>
         
             <section >
                 <pre><code class="language-txt">                  ＿人人人人人人人人人人人人人人人＿
-                  ＞　Deno（Fresh）はいいぞ！！　＜
+                  ＞　開発はたのしい！！　＜
                   ￣Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y^Y￣
 </code></pre>
 
@@ -153,20 +135,40 @@
         
             <section >
                 <ul>
+<li>本講座の狙い</li>
+<li>Web アプリケーションとは</li>
+<li>Web アプリケーションの動く仕組み</li>
+<li>検証ツールとその使い方</li>
+<li>Web サイトをハック！1（HTML）</li>
+<li>Web サイトをハック！2（JS）</li>
+<li>まとめ</li>
+</ul>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <h2>本講座の狙い</h2>
+
+            </section>
+        
+            <section >
+                <ul>
 <li>
-<p>プロダクトを作るときの流れ</p>
+<p>Web アプリの開発に興味を持つ．</p>
 </li>
 <li>
-<p>イメージ</p>
+<p>検証ツールで HTML と JavaScript を体験する．</p>
 </li>
 <li>
-<p>細分化する</p>
-</li>
-<li>
-<p>コードを書く</p>
-</li>
-<li>
-<p>まとめ</p>
+<p>あらゆる機能を実現できることを知る．</p>
 </li>
 </ul>
 
@@ -181,21 +183,129 @@
     
     <section>
         <section >
-            <h2>プロダクトを作るときの流れ</h2>
+            <h2>Web アプリケーションとは</h2>
+
+            </section>
+        
+            <section >
+                <ul>
+<li>
+<p>Web アプリケーションはインターネットを通じて動作するプログラム．</p>
+</li>
+<li>
+<p>「サーバ」と「クライアント」で構成される．</p>
+</li>
+</ul>
+
+            </section>
+        
+            <section >
+                <p>サーバ</p>
+<ul>
+<li>インターネット上の大きなコンピュータ</li>
+<li>データやプログラムを保管</li>
+<li>クライアントからのリクエストに応じて情報を提供</li>
+</ul>
+
+            </section>
+        
+            <section >
+                <p>クライアント</p>
+<ul>
+<li>ユーザが使うコンピュータやスマートフォン</li>
+<li>サーバにアクセスし情報をリクエスト</li>
+<li>サーバから受け取った情報をもとに Web アプリケーションの画面を表示・操作</li>
+</ul>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <h2>Web アプリケーションの仕組み</h2>
 
             </section>
         
             <section >
                 <ol>
+<li>ブラウザに URL を入力する．</li>
+<li>サーバは Web サイトの HTML，CSS，JavaScript のコードをブラウザに送信する．</li>
+<li>ブラウザは受け取ったコードを読み，画面に情報を表示する．</li>
+</ol>
+
+            </section>
+        
+            <section >
+                <pre><code class="language-txt">      クライアント               サーバ
+          |                      |
+          |-----1.リクエスト------&gt;|
+          |                      |
+          |&lt;---2.データ/プログラム--|
+          |                      |
+          |------3.表示/操作-------|
+          |                      |
+</code></pre>
+<p>–</p>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <h2>検証ツールとその使い方</h2>
+
+            </section>
+        
+            <section >
+                <ul>
 <li>
-<p>完成図を具体的にイメージする．</p>
+<p>検証ツールは，ブラウザに組み込まれている開発者向けのツールである．</p>
 </li>
 <li>
-<p>処理を細分化し，実装する処理を明確にする．</p>
+<p>HTML，CSS，JavaScript をリアルタイムで編集・デバッグできる．</p>
 </li>
 <li>
-<p>コードを書く．</p>
+<p>画面上で右クリックして「検証」！</p>
 </li>
+</ul>
+
+            </section>
+        
+            <section >
+                <p>早速触ってみましょう！</p>
+
+            </section>
+        
+
+    </section>
+    
+
+
+
+    
+    <section>
+        <section >
+            <h2>Web サイトをハック！1（HTML）</h2>
+
+            </section>
+        
+            <section >
+                <ol>
+<li>検証ツールを開く</li>
+<li>「Elements」タブを選択</li>
+<li>HTML を書き換えてみよう！</li>
 </ol>
 
             </section>
@@ -209,239 +319,55 @@
     
     <section>
         <section >
-            <h2>イメージ</h2>
+            <h2>Web サイトをハック！2（JS）</h2>
 
             </section>
         
             <section >
-                <p>全体像をイメージしておく．</p>
-<p>イメージできないものは実装できない．</p>
+                <ol>
+<li>検証ツールを開く</li>
+<li>「Console」タブを選択</li>
+<li>コードを貼り付けて実行してみよう！</li>
+</ol>
 
             </section>
         
             <section >
-                <ul>
-<li>画面には何が表示されているか．</li>
-<li>各ボタンをクリックしたら何が起こるのか．</li>
-<li>全体の目標が達成されるかどうか．</li>
-</ul>
+                <p>処理を書いたコード</p>
+<pre><code class="language-js">function randomColor() {
+  return &quot;#&quot; + Math.floor(Math.random() * 16777215).toString(16);
+}
 
-            </section>
-        
-            <section >
-                <p>（方法は何でも良い）</p>
+function randomFontSize() {
+  return Math.floor(Math.random() * (56 - 10 + 1)) + 10 + &quot;px&quot;;
+}
 
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-    <section>
-        <section >
-            <h2>細分化する</h2>
-
-            </section>
-        
-            <section >
-                <p>細分化の目的</p>
-<ul>
-<li>
-<p>やるべきことを整理する．</p>
-</li>
-<li>
-<p>実装の難易度を下げる．</p>
-</li>
-<li>
-<p>ググりやすくする．</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <p><strong>「細分化」で重要なのは</strong></p>
-<p><strong>日本語（母国語）の運用能力である．</strong></p>
-
-            </section>
-        
-            <section >
-                
-            </section>
-        
-            <section >
-                <p>HTML・CSS・JavaScript を使ってじゃんけんゲームのプロダクトをつくるぞ！</p>
-
-            </section>
-        
-            <section >
-                <p>よし，「じゃんけんの処理」をつくろう！！</p>
-
-            </section>
-        
-            <section >
-                <p>(´・ω・｀;)…??</p>
-
-            </section>
-        
-            <section >
-                <p>グーチョキパーをそれぞれ 0, 1, 2 で管理するようなルールとし，構造を考えてみる．</p>
-
-            </section>
-        
-            <section >
-                <pre><code class="language-txt">じゃんけんをする処理
-├── 画面に「グー」「チョキ」「パー」ボタンを表示する
-├── ボタンをクリックしたら指定の処理を動かす処理
-├── 自分が選択した手を取得する処理
-├── 敵の手を定めるためにランダムな数値を発生させる処理
-├── 数値をじゃんけんの手に変換する処理
-├── 自分の手と敵の手から勝敗を算出する処理
-└── 結果を画面に表示する処理
+function changeTextProperties(className, index = 0) {
+  const elements = document.getElementsByClassName(className);
+  if (elements.length &gt; 0) {
+    if (index &lt; elements.length) {
+      const element = elements[index];
+      element.style.setProperty(&quot;color&quot;, randomColor(), &quot;important&quot;);
+      element.style.setProperty(&quot;font-size&quot;, randomFontSize(), &quot;important&quot;);
+      changeTextProperties(className, index + 1);
+    } else {
+      setTimeout(() =&gt; changeTextProperties(className), 200);
+    }
+  } else {
+    console.log(&quot;No elements with the specified class found&quot;);
+  }
+}
 </code></pre>
 
             </section>
         
             <section >
-                <p>できるだけ細かくしよう！</p>
-
-            </section>
-        
-            <section >
-                <p>「入力と出力を明確にする」のがオススメ！</p>
-
-            </section>
-        
-            <section >
-                <pre><code class="language-txt">じゃんけんをする処理
-├── 画面に「グー」「チョキ」「パー」ボタンを表示する
-├── ボタンをクリックしたら指定の処理を動かす処理
-├── 自分が選択したボタンの値を取得する処理
-├── [✓]最小値と最大値を入力するとその間のランダムな数値を出力する処理
-├── [✓]数値を入力するとじゃんけんの手を出力する処理
-├── [✓]自分の手（数値）と敵の手（数値）を入力すると勝敗を出力する処理
-└── 結果を画面に表示する処理
+                <p>実行するコード</p>
+<pre><code class="language-js">changeTextProperties(&quot;top-catch-01&quot;);
+changeTextProperties(&quot;top-catch-02&quot;);
+changeTextProperties(&quot;top-catch-03&quot;);
+changeTextProperties(&quot;top-catch-04&quot;);
 </code></pre>
-
-            </section>
-        
-
-    </section>
-    
-
-
-
-    
-    <section>
-        <section >
-            <h2>コードを書く</h2>
-
-            </section>
-        
-            <section >
-                <p>コードを書くときは「関数」を活用する．</p>
-
-            </section>
-        
-            <section >
-                <p>関数を活用することのメリット</p>
-<ul>
-<li>
-<p>動作検証がしやすい．</p>
-</li>
-<li>
-<p>各関数はよりシンプルなコードになる．</p>
-</li>
-<li>
-<p>関数を組み合わせた場合でも動作する．</p>
-</li>
-</ul>
-
-            </section>
-        
-            <section >
-                <p><strong>関数のポイント</strong></p>
-<p><strong>「入力値（引数）」と「出力値（戻り値）」</strong></p>
-
-            </section>
-        
-            <section >
-                <p>前項で細分化した文を見ながら式を書けば良い．</p>
-
-            </section>
-        
-            <section >
-                <pre><code class="language-js">// 最小値と最大値を入力するとその間のランダムな数値を出力する関数
-const generateRandomNumber = (min, max) =&gt;
-  ~~(Math.random() * (max - min + 1)) + min;
-
-console.log(generateRandomNumber(0, 2));
-
-// 数値を入力するとじゃんけんの手を出力する関数
-const generateJankenHand = (index) =&gt; [&quot;グー&quot;, &quot;チョキ&quot;, &quot;パー&quot;][index];
-
-console.log(generateJankenHand(0));
-console.log(generateJankenHand(1));
-console.log(generateJankenHand(2));
-
-// プレイヤーの手（数値）と敵の手（数値）を入力すると勝敗を出力する関数
-const generateResult = (player_hand_index, computer_hand_index) =&gt;
-  [
-    [&quot;draw&quot;, &quot;win&quot;, &quot;lose&quot;],
-    [&quot;lose&quot;, &quot;draw&quot;, &quot;win&quot;],
-    [&quot;win&quot;, &quot;lose&quot;, &quot;draw&quot;],
-  ][player_hand_index][computer_hand_index];
-
-console.log(generateResult(0, 1));
-console.log(generateResult(1, 1));
-console.log(generateResult(2, 0));
-</code></pre>
-
-            </section>
-        
-            <section >
-                <p>あとは動作検証した関数をまとめて</p>
-<p>処理を実装すれば OK．</p>
-
-            </section>
-        
-            <section >
-                <pre><code class="language-js">const janken = (e) =&gt; {
-  // プレイヤーが選択したボタンの値を取得する処理
-  const player_hand_index = e.target.value;
-  // 最小値と最大値を入力するとその間のランダムな数値を出力する処理
-  const computer_hand_index = generateRandomNumber(0, 2);
-  // 数値を入力するとじゃんけんの手を出力する処理
-  const player_hand = generateJankenHand(player_hand_index);
-  const computer_hand = generateJankenHand(computer_hand_index);
-  // プレイヤーの手（数値）と敵の手（数値）を入力すると勝敗を出力する処理
-  const result = generateResult(player_hand_index, computer_hand_index);
-  // 結果を画面に表示する処理
-  document.getElementById(&quot;player_hand&quot;).innerText = player_hand;
-  document.getElementById(&quot;computer_hand&quot;).innerText = computer_hand;
-  document.getElementById(&quot;result&quot;).innerText = result;
-};
-
-// ボタンをクリックしたら指定の処理を動かす処理
-document
-  .getElementById(&quot;buttons&quot;)
-  .addEventListener(
-    &quot;click&quot;,
-    (e) =&gt; (e.target.tagName === &quot;BUTTON&quot; ? janken(e) : false),
-    true
-  );
-</code></pre>
-
-            </section>
-        
-            <section >
-                <p>全体のコードは以下．</p>
-<ul>
-<li><a href="https://github.com/taroosg/20230110-lt">https://github.com/taroosg/20230110-lt</a></li>
-</ul>
 
             </section>
         
@@ -459,20 +385,15 @@ document
             </section>
         
             <section >
-                <p>今回はプロダクトを実装する際の手順を「日本語」「関数」に焦点を当てて解説した．</p>
-
-            </section>
-        
-            <section >
                 <ul>
 <li>
-<p>全体のイメージをつくれ！</p>
+<p>Web アプリケーションはいいぞ</p>
 </li>
 <li>
-<p>処理は「入力値」「出力値」で細分化せよ！</p>
+<p>検証ツール使ってみよう</p>
 </li>
 <li>
-<p>各処理を「関数」でつくれ！</p>
+<p>どんなことができるかイメージしてみよう</p>
 </li>
 </ul>
 
